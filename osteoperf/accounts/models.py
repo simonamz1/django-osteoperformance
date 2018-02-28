@@ -49,6 +49,8 @@ class Patient(models.Model):
     address = models.CharField(max_length=255)
     healthcare_number = models.CharField(max_length=15)
 
+    def __str__(self):
+        return self.user.first_name + " " + self.user.last_name
 
 class Practitioner(models.Model):
     SPECIALIZATION = (
@@ -60,3 +62,6 @@ class Practitioner(models.Model):
     address = models.CharField(max_length=255)
     diploma = models.CharField(max_length=15)
     specialization = MultiSelectField(choices=SPECIALIZATION)
+
+    def __str__(self):
+        return self.user.first_name + " " + self.user.last_name

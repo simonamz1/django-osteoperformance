@@ -11,6 +11,7 @@ django = "*"
 ipython = "*"
 django-debug-toolbar = "*"
 "django-bootstrap3" = "*"
+django-multiselectfield = "*"
 
 
 [dev-packages]
